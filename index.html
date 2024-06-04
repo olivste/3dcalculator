@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Custo e Lucro de Impressão 3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Custo e Lucro de Impressão 3D</h1>
+        <form id="calculator-form">
+            <label for="filament-cost">Valor do Kg do Filamento (R$):</label>
+            <input type="number" id="filament-cost" step="0.01" required>
+
+            <label for="filament-used">Gramas Utilizadas:</label>
+            <input type="number" id="filament-used" required>
+
+            <label for="print-time">Tempo de Impressão (horas):</label>
+            <input type="number" id="print-time" step="0.01" required>
+
+            <label for="profit-margin">Margem de Lucro (%):</label>
+            <input type="number" id="profit-margin" step="0.01" value="350" required>
+
+            <button type="button" onclick="calculate()">Calcular</button>
+        </form>
+        <div id="results">
+            <p class="paragrafo-resultado">Custo Total: R$ <span id="total-cost">0.00</span></p>
+            <p class="paragrafo-resultado">Lucro Sugerido: R$ <span id="suggested-profit">0.00</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
